@@ -132,6 +132,12 @@ label {
   -webkit-appearance: none;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 #number-of-people-input,
 #bill-input {
   border-radius: 5px;
