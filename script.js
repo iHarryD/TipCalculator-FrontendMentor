@@ -44,8 +44,8 @@ function outputCalculator() {
   let tipAmountPerPerson = tipInAmount / numberOfPeopleInput.value;
   let totalAmountWithTip = tipInAmount + Number(billInput.value);
   let totalAmountPerPerson = totalAmountWithTip / numberOfPeopleInput.value;
-  tipOutput.innerText = tipAmountPerPerson.toFixed(3);
-  totalOutput.innerText = totalAmountPerPerson.toFixed(3);
+  tipOutput.innerText = tipAmountPerPerson.toFixed(2);
+  totalOutput.innerText = totalAmountPerPerson.toFixed(2);
 }
 
 function reset() {
