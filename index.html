@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>iSPITTER</title>
+  </head>
+  <body>
+    <div id="god-container">
+      <header>
+        <img src="./tip-calculator-app-main/images/logo.svg" alt="" />
+      </header>
+      <main>
+        <form id="left" class="halfs">
+          <div id="bill" class="bill-heads">
+            <label for="bill-input">Bill</label>
+            <input type="number" id="bill-input" required />
+          </div>
+          <div id="tip">
+            <label>Select Tip &percnt;</label>
+            <div id="grid-tip">
+              <input type="radio" name="tip-percent" value="5" />
+              <input type="radio" name="tip-percent" value="10" />
+              <input type="radio" name="tip-percent" value="15" />
+              <input type="radio" name="tip-percent" value="25" />
+              <input type="radio" name="tip-percent" value="50" />
+              <input type="number" name="tip-percent" placeholder="Custom" />
+            </div>
+          </div>
+          <div id="number-of-people" class="bill-heads">
+            <label for="number-of-people-input">Number of People</label>
+            <label id="cannot-be-zero">Can't be zero</label>
+            <label id="cannot-be-negative">Seriosly, bro?</label>
+            <input type="number" id="number-of-people-input" required />
+          </div>
+        </form>
+        <div id="right" class="halfs">
+          <div id="calculator">
+            <div id="tip-person" class="per-person-div">
+              <div class="output-info">
+                <p class="tip-amount-total">Tip Amount</p>
+                <p class="per-person">/ person</p>
+              </div>
+              <div id="tip-amount-per-person" class="outputs">
+                &dollar;<span>0.000</span>
+              </div>
+            </div>
+            <div id="total-person" class="per-person-div">
+              <div class="output-info">
+                <p class="tip-amount-total">Total</p>
+                <p class="per-person">/ person</p>
+              </div>
+              <div id="total-per-person" class="outputs">
+                &dollar;<span>0.000</span>
+              </div>
+            </div>
+          </div>
+          <button id="btn" type="submit">RESET</button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
