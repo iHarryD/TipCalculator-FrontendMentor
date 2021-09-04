@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+  .bill-heads,
+  #tip {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  #grid-tip {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .per-person-div {
+    align-items: normal !important;
+    flex-direction: column;
+    margin: 15px 0;
+    position: static !important;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+body {
+  background: #c4e4e7;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.9);
+}
+
+header {
+  height: 130px;
+}
+
+header img {
+  display: block;
+  margin: auto;
+}
+
+#god-container {
+  width: 1000px;
+}
+
+main {
+  width: 100%;
+  min-height: 450px;
+  max-height: max-content;
+  background-color: rgb(255, 255, 255);
+  border-radius: 17px;
+  display: flex;
+  padding: 10px;
+}
+
+.halfs {
+  flex: 1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 30px;
+  justify-content: space-between;
+}
+
+#left {
+  background: transparent;
+}
+
+#right {
+  background: hsl(183, 100%, 15%);
+}
+
+label {
+  /* display: block; */
+  line-height: 2;
+  color: #687c7d;
+}
+
+.bill-heads,
+#tip {
+  width: 100%;
+}
+
+.bill-heads input[type="number"] {
+  width: 100%;
+  height: 40px;
+}
+
+#grid-tip {
+  grid-gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+#left input[type="number"] {
+  outline: none;
+  background-color: #e7ebeed7;
+  border: none;
+  padding: 20px;
+  color: #1a5453;
+  text-align: right;
+  letter-spacing: 1.2px;
+}
+
+#left input[type="number"]:focus {
+  border: 2px solid #26c2ad;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#tip input {
+  border-radius: 5px;
+  height: 50px;
+  outline: none;
+  position: relative;
+}
+
+#tip input[type="radio"] {
+  background: #00474c;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+#number-of-people-input,
+#bill-input {
+  border-radius: 5px;
+  outline: none;
+  background-position-y: center;
+  background-position-x: 1rem;
+  background-repeat: no-repeat;
+}
+
+#bill-input {
+  background-image: url(./tip-calculator-app-main/images/icon-dollar.svg);
+}
+
+#number-of-people-input {
+  background-image: url(./tip-calculator-app-main/images/icon-person.svg);
+}
+
+#tip input[type="radio"]::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #ffffff;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#tip input[type="number"]::before {
+  content: "Custom";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #ffffff;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+#tip input[type="number"] {
+  text-align: center;
+}
+
+#tip input[value="5"]::before {
+  content: "5%";
+}
+#tip input[value="10"]::before {
+  content: "10%";
+}
+#tip input[value="15"]::before {
+  content: "15%";
+}
+#tip input[value="25"]::before {
+  content: "25%";
+}
+#tip input[value="50"]::before {
+  content: "50%";
+}
+
+#btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 6px;
+  background: #26c2ad;
+  color: #00474c;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#calculator {
+  width: 100%;
+  min-height: 200px;
+  max-height: max-content;
+  position: relative;
+}
+
+.per-person-div {
+  width: 100%;
+  min-height: 76px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+#tip-person {
+  top: 0;
+}
+
+#total-person {
+  bottom: 0;
+}
+
+.tip-amount-total {
+  color: #fff;
+}
+
+.per-person {
+  color: #687c7d;
+  font-size: 15px;
+}
+
+.outputs,
+.outputs span {
+  color: #26c2ad;
+  font-size: 2rem;
+}
+
+#btn:hover {
+  background: #c4e4e7;
+}
+
+#tip input[type="radio"]:checked::before {
+  color: #00474c;
+}
+
+#tip input[type="radio"]:checked {
+  background: #26c2ad;
+}
+
+#cannot-be-zero,
+#cannot-be-negative,
+#enter-a-valid-amount {
+  float: right;
+  color: red;
+  display: none;
+}
